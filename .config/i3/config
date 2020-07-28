@@ -11,6 +11,10 @@ font pango:Inconsolata Medium 10
 # 키 설정
 set $mod Mod4
 
+# 기본 터미널 설정
+set $terminal alacritty
+set $terminal_execute alacritty -e
+
 # 설정 파일 다시 불러오기
 bindsym $mod+Shift+c reload
 
@@ -21,7 +25,7 @@ bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle
 bindsym XF86AudioMicMute exec --no-startup-id amixer set Capture toggle
 
 # 터미널 실행
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec "$terminal"
 
 # 현재 윈도우 닫기
 bindsym $mod+Shift+q kill
@@ -63,7 +67,7 @@ bindsym $mod+Shift+4 move container to workspace number $ws4
 bindsym $mod+Shift+5 move container to workspace number $ws5
 
 # 바로가기
-bindsym $mod+Space mode "shortcut"
+bindsym $mod+space mode "shortcut"
 
 mode "shortcut" {
     bindsym Return mode "default"
@@ -71,7 +75,7 @@ mode "shortcut" {
     bindsym $mod+Space mode "default"
 
     # 파일 탐색기
-    bindsym f exec "ranger"
+    bindsym f exec "$terminal_execute ranger"
 }
 
 # Polybar 실행
