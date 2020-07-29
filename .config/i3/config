@@ -30,8 +30,8 @@ bindsym $mod+Return exec "$terminal"
 # 현재 윈도우 닫기
 bindsym $mod+Shift+q kill
 
-# dmenu 실행
-bindsym $mod+d exec dmenu_run
+# rofi 실행
+bindsym $mod+d exec rofi -show drun
 
 # 화살표 키를 사용해 초점 변경
 bindsym $mod+Left focus left
