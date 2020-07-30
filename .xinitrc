@@ -7,5 +7,8 @@ fcitx &
 # 배경화면
 ~/.fehbg &
 
+# 컴포지터
+picom -GCb
+
 # 윈도우 매니저 실행
 exec i3

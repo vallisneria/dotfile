@@ -80,3 +80,12 @@ mode "shortcut" {
 
 # Polybar 실행
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+# 윈도우 타이틀 표시되지 않도록 하기
+for_window [class="^.*"] border pixel 1
+new_window 1pixel
+
+# 윈도우 간 거리두기
+gaps inner 15
+gaps outer 0
+gaps bottom 15 

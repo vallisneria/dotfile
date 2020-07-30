@@ -1,5 +1,5 @@
 [bar/bottom]
-background = #5eafba
+background = #00000000
 foreground = #000
 height = 35
 padding = 3
