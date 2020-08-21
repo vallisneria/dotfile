@@ -1,59 +1,63 @@
-[bar/bottom]
-background = #00000000
-foreground = #000
-height = 35
-padding = 3
-module-margin = 2 
-font-0 = Noto Sans CJK KR:style=Regular:size=12
-font-1 = "Font Awesome 5 Free:style=Solid:pixelsize=14;3"
-font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=14;3"
-font-3 = "Font Awesome 5 Brands:pixelsize=1343"
-modules-left = workspace volume battery wireless-network
-modules-right = date time system-menu
-locale = ko_KR.UTF-8
+[color]
+  black = #1f1a2e
+  white = #e0e0e0
+  red = #d04457
+  yellow = #ffc732
+  blue = #7b93e2
+  green = #9cac6a
+  lightgray = #c5e5e4
+
+[bar/top]
+  background = ${color.black}
+  foreground = ${color.white}
+  height = 30
+  padding = 3
+  module-margin = 1
+  line-size = 5
+  font-0 = NeoDunggeunmo:style=Regular:size=13
+  modules-left = workspace volume battery wireless-network
+  modules-right = date time
+  locale = ko_KR.UTF-8
 
 [module/date]
-type = internal/date
-format =  <label>
-label = %date%
-date = %Y-%m-%d%
+  type = internal/date
+  format = <label>
+  label = %date%
+  date = %Y-%m-%d%
 
 [module/time]
-type = internal/date
-format =  <label>
-label = %time%
-time = %H:%M
+  type = internal/date
+  format = <label>
+  label = %time%
+  time = %H:%M
 
 [module/wireless-network]
-type = internal/network
-interface = wlp3s0
-label-connected =  %essid%
-label-disconnected =  Not Connected
+  type = internal/network
+  format-connected = <label-connected>
+  format-connected-underline = ${color.green}
+  format-disconnected = <label-disconnected>
+  format-disconnected-underline = ${color.red}
+  interface = wlp3s0
+  label-connected = %essid%
+  label-disconnected = Not Connected
 
 [module/battery]
-type = internal/battery
-format-full =  <label-full>
-format-charging =  <label-charging>
-full-at = 98
+  type = internal/battery
+  format-full = <label-full>
+  format-full-underline = ${color.blue}
+  format-charging = <label-charging>
+  format-charging-underline = ${color.blue}
+  format-discharging-underline = ${color.red}
+  full-at = 98
 
 [module/volume]
-type = internal/alsa
-format-volume = <ramp-volume> <label-volume>
-format-muted =  0%
-ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 = 
-
-[module/system-menu]
-type = custom/menu
-expand-right = false
-label-open = 
-label-close =  
-menu-0-0 =  
-menu-0-0-exec = /usr/bin/shutdown now
-menu-0-1 =  
-menu-0-1-exec = /usr/bin/reboot
+  type = internal/alsa
+  format-volume = <label-volume>
+  format-volume-underline = ${color.yellow}  
+  format-muted = muted
+  format-muted-underline = ${color.red}
 
 [module/workspace]
-type = internal/i3
-format =  <label-state> <label-mode>
+  type = internal/i3
+  label-focused-underline = ${color.lightgray}
+  format = <label-state> <label-mode>
