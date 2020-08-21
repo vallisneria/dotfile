@@ -1,0 +1,22 @@
+configuration {
+    modi: "drun";
+    font: "NeoDunggeunmo 18";
+
+    /* state       backgd   foregd    bgalt    hlbg     hlfg */
+    color-normal: "#1f1a2e, #e0e0e0, #1f1e2e, #9cac6a, #000000";
+    color-urgent: "#1f1a2e, #e0e0e0, #1f1e2e, #9cac6a, #000000";
+    color-active: "#1f1a2e, #e0e0e0, #1f1e2e, #9cac6a, #000000";
+
+    /* state       backgd   border   seperator */
+    color-window: "#1f1a2e, #e0e0e0, #e0e0e0";
+}  
+
+/*
+black = #1f1a2e
+white = #e0e0e0
+red = #d04457
+yellow = #ffc732
+blue = #7b93e2
+green = #9cac6a
+lightgray = #c5e5e4
+*/
