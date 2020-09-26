@@ -18,7 +18,8 @@ chsh -s /usr/bin/zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # 불필요한 파일 제거
-rm README.md install.sh
+rm README.md
+rm -r tmp/
 
 # 재부팅
 reboot
