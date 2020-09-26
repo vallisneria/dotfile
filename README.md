@@ -1,5 +1,5 @@
 # DOTFILE
-![screenshot](./screenshot.png)
+![screenshot](./tmp/screenshot.png)
 
 # 설치 방법
 git이 설치되어 있어야 합니다.
