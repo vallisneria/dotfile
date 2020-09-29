@@ -10,5 +10,8 @@ fcitx &
 # 컴포지터
 picom -GCb
 
+# noti
+/usr/bin/dunst &
+
 # 윈도우 매니저 실행
 exec i3

@@ -45,10 +45,9 @@
   type = internal/battery
   format-full = <label-full>
   format-full-underline = ${color.blue}
-  format-charging = <label-charging>
+  format-charging = 충전중:<label-charging>
   format-charging-underline = ${color.blue}
   format-discharging-underline = ${color.red}
-  full-at = 98
 
 [module/volume]
   type = internal/alsa

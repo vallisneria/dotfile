@@ -15,6 +15,9 @@ set $mod Mod4
 set $terminal alacritty
 set $terminal_execute alacritty -e
 
+# 타일링/플로팅 전환
+bindsym $mod+Shift+Return floating toggle
+
 # 설정 파일 다시 불러오기
 bindsym $mod+Shift+c reload
 
@@ -31,7 +34,7 @@ bindsym $mod+Return exec "$terminal"
 bindsym $mod+Shift+q kill
 
 # rofi 실행
-bindsym $mod+d exec rofi -show drun
+bindsym $mod+d exec --no-startup-id rofi -show drun
 
 # 화살표 키를 사용해 초점 변경
 bindsym $mod+Left focus left
@@ -84,6 +87,8 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # 윈도우 타이틀 표시되지 않도록 하기
 for_window [class="^.*"] border pixel 1
 new_window 1pixel
+
+for_window [class="Minecraft*"] maximaze
 
 # 윈도우 간 거리두기
 gaps inner 15
