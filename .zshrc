@@ -20,9 +20,9 @@ source $ZSH/oh-my-zsh.sh
 export PATH="$PATH:$HOME/bin"
 
 # alias
-DEFAULT_TEXT_EDITOR=nvim
-alias vi="$DEFAULT_TEXT_EDITOR"
-alias vim="$DEFAULT_TEXT_EDITOR"
+EDITOR=nvim
+alias vi="$EDITOR"
+alias vim="$EDITOR"
 
 alias dotf='/usr/bin/git --git-dir=$HOME/.dot/ --work-tree=$HOME'
 
