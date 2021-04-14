@@ -27,6 +27,9 @@ bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 5%-
 bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle
 bindsym XF86AudioMicMute exec --no-startup-id amixer set Capture toggle
 
+# 화면 캡처
+bindsym Print exec scrot '%Y-%m-%d_$wx$h_scrot.png' -e 'mv $f ~/Pictures/screenshots/' 
+
 # 터미널 실행
 bindsym $mod+Return exec "$terminal"
 
@@ -87,8 +90,6 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # 윈도우 타이틀 표시되지 않도록 하기
 for_window [class="^.*"] border pixel 1
 new_window 1pixel
-
-for_window [class="Minecraft*"] maximaze
 
 # 윈도우 간 거리두기
 gaps inner 15
