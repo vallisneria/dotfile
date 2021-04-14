@@ -9,7 +9,7 @@ ZSH_THEME="agnoster"
 
 # 플러그인
 # https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins
-plugins=(git)
+plugins=(git zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -20,7 +20,7 @@ source $ZSH/oh-my-zsh.sh
 export PATH="$PATH:$HOME/bin"
 
 # alias
-EDITOR=nvim
+EDITOR=/usr/bin/nvim
 alias vi="$EDITOR"
 alias vim="$EDITOR"
 
