@@ -1,0 +1,26 @@
+#!/bin/bash
+
+bspc monitor -d I II III IV V 
+
+bspc config border_width            0
+bspc config window_gap              15
+bspc config normal_border_color     \#000000
+bspc config focused_border_color    \#000000
+
+bspc config split_ratio             0.52
+bspc config borderless_monocle      true
+bspc config gapless_monocle         true
+
+# 환경 변수 설정
+export GTK_IM_MODULE=kime
+export QT_IM_MODULE=kime
+export XMODIFIERS=@im=kime
+
+# 프로그램 실행
+/usr/bin/kime-xim &
+/usr/bin/feh --bg-scale -no-fehbg $HOME/.config/wallpaper/wallpaper.png &
+$HOME/.config/polybar/launch.sh &
+/usr/bin/dunst &
+/usr/bin/sxhkd -c $HOME/.config/bspwm/sxhkdrc &
+/usr/bin/picom -GCb
+
