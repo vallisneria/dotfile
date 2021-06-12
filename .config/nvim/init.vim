@@ -18,6 +18,8 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'mattn/emmet-vim'
 Plug 'ap/vim-css-color'
 Plug 'tpope/vim-surround'
+Plug 'rust-lang/rust.vim'
+Plug 'tomlion/vim-solidity'
 
 call plug#end()
 
@@ -28,12 +30,14 @@ set shiftwidth=4
 set expandtab
 set autoindent
 set copyindent
-set nowrap
 set number
 
 " delimitMate
 let delimitMate_expand_cr=1
 
 " coc-nvim 확장 목록
-let g:coc_global_extensions = ['coc-json', 'coc-sh', 'coc-pyright', 'coc-rust-analyzer', 'coc-tsserver']
+let g:coc_global_extensions = ['coc-json', 'coc-sh', 'coc-pyright', 'coc-tsserver']
+
+" yaml 들여쓰기 2칸
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 

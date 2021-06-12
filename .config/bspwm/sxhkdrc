@@ -1,29 +1,36 @@
-# 시스템
+# 볼륨 증가/감소/음소거 키
 XF86Audio{RaiseVolume,LowerVolume,Mute}
     /usr/bin/amixer set Master {5%+,5%-,toggle}
 
-
-# window manager 공통
+# Terminal Emulator
 super + Return
     alacritty
 
+# 프로그램 실행
 super + d
     rofi -show drun
 
+# Screenshots
 Print
     scrot '%Y-%m-%d_%H-%M-$S_$wx$h.png' -e 'mv $f $HOME/Pictures/screenshots'
 
 
-# bspwm
+
+##### BSPWM #####
+
+# quit/restart
 super + shift + {q,r}
     bspc {quit, wm -r}
 
+# 창 포커스/위치 이동
 super + {_, shift + }{h,j,k,l}
     bspc node -{f,s} {west, south, north, east}
 
+# 창 종료
 super + q
     bspc node -c
 
+# workspace 전환/특정 workspace로 창 옮기기
 super + {_,shift + }{1-9,0}
     bspc {desktop -f,node -d} '^{1-9,10}'
 
