@@ -24,5 +24,5 @@ EDITOR=/usr/bin/nvim
 alias vi="$EDITOR"
 alias vim="$EDITOR"
 
-alias dotf='/usr/bin/git --git-dir=$HOME/.dot/ --work-tree=$HOME'
+alias dotf='/usr/bin/git --git-dir=$HOME/.dotfile/ --work-tree=$HOME'
 

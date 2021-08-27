@@ -23,7 +23,7 @@ Plug 'tomlion/vim-solidity'
 
 call plug#end()
 
-
+" 설정
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
@@ -31,13 +31,22 @@ set expandtab
 set autoindent
 set copyindent
 set number
+set list
+set noswapfile
+
+" 단축키 설정
+map <C-s> :w<CR>
+map <F5> :NERDTreeToggle<CR>
 
 " delimitMate
 let delimitMate_expand_cr=1
 
 " coc-nvim 확장 목록
-let g:coc_global_extensions = ['coc-json', 'coc-sh', 'coc-pyright', 'coc-tsserver']
+let g:coc_global_extensions = ['coc-json', 'coc-sh', 'coc-pyright', 'coc-tsserver', 'coc-rls']
 
 " yaml 들여쓰기 2칸
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+syntax enable
+filetype plugin indent on
 

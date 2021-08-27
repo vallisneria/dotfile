@@ -18,6 +18,11 @@ export GTK_IM_MODULE=kime
 export QT_IM_MODULE=kime
 export XMODIFIERS=@im=kime
 
+# screen brightness control
+brightness_level=0.7
+monitor=$(xrandr | grep " connected" | cut -f1 -d" ")
+xrandr --output $monitor --brightness $brightness_level
+
 # 프로그램 실행
 /usr/bin/kime-xim &
 /usr/bin/feh --bg-scale -no-fehbg $HOME/.config/wallpaper/wallpaper.png &
@@ -27,3 +32,5 @@ $HOME/.config/polybar/launch.sh &
 /usr/bin/picom -GCb &
 /usr/bin/xsetroot -cursor_name left_ptr &
 /usr/bin/fusuma &
+/usr/bin/discord --start-minimized &
+

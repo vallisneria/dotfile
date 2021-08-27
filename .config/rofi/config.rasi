@@ -1,6 +1,6 @@
 configuration {
     modi: "drun";
-    font: "NeoDunggeunmo 15";
+    font: "NeoDunggeunmo 16";
 
     /* state       backgd   foregd    bgalt    hlbg     hlfg */
     color-normal: "#1f1a2e, #e0e0e0, #1f1e2e, #9cac6a, #000000";
