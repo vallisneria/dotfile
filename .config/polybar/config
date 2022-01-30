@@ -1,69 +1,35 @@
-[color]
-    black = #1f1a2e
-    white = #e0e0e0
-    red = #d04457
-    yellow = #ffc732
-    blue = #7b93e2
-    green = #9cac6a
-    lightgray = #c5e5e4
+include-file = ~/.config/polybar/color
+include-file = ~/.config/polybar/font
+include-file = ~/.config/polybar/modules
 
-[bar/top]
-    background = ${color.black}
-    foreground = ${color.white}
-    height = 30
-    padding = 5
-    module-margin = 1
+[settings]
+    psuedo-transparency = true
+
+[bar/main]
+    background = ${va11halla-color.background}
+    foreground = ${va11halla-color.foreground}
+    width = 98.8%
+    height = 35
+    padding = 2
     line-size = 5
-    font-0 = NeoDunggeunmo:style=Regular:size=13
-
-    modules-left = workspace volume battery wireless-network
-    modules-right = date time
-
-    locale = ko_KR.UTF-8
-
-    wm-restack = bspwm
+    fixed-center = true
+    offset-x = 0.6%
+    offset-y = 0.5%
+    radius = 10
     cursor-click = pointer
     cursor-scroll = ns-resize
+    font-0 = ${font.neodgm16}
+    font-1 = ${font.siji}
 
-[module/date]
-    type = internal/date
-    format = <label>
-    label = %date%
-    date = %Y-%m-%d%
+[bar/top]
+    inherit = bar/main
+    module-margin = 1
 
-[module/time]
-    type = internal/date
-    format = <label>
-    label = %time%
-    time = %H:%M
+    modules-left = who-am-i volume battery wireless-network
+    modules-center = workspace
+    modules-right = date time
 
-[module/wireless-network]
-    type = internal/network
-    interface = wlp3s0
-    format-connected = <label-connected>
-    format-connected-underline = ${color.green}
-    format-disconnected = <label-disconnected>
-    format-disconnected-underline = ${color.red}
-    label-connected = ▲%upspeed% ▼%downspeed%
-    label-disconnected = Offline
-
-[module/battery]
-    type = internal/battery
-    format-full = <label-full>
-    format-full-underline = ${color.blue}
-    format-charging = <label-charging>
-    format-charging-underline = ${color.blue}
-    format-discharging-underline = ${color.red}
-
-[module/volume]
-    type = internal/alsa
-    format-volume = <label-volume>
-    format-volume-underline = ${color.yellow}
-    format-muted = muted
-    format-muted-underline = ${color.red}
-
-[module/workspace]
-    type = internal/bspwm
-    label-focused-underline = ${color.lightgray}
-    format = <label-state> <label-mode>
-
+[bar/bottom]
+    inherit = bar/main
+    bottom = true
+    modules-left = workspace

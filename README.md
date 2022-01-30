@@ -1,12 +1,16 @@
 # DOTFILE
-![screenshot](./tmp/screenshot.png)
 
 # 설치 방법
 git이 설치되어 있어야 합니다.
-```git --version```
+```sh
+git --version
+```
 
 git이 설치되어 있다면 아래 명령어를 실행합니다.
-```
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/vallisneria/dotfile/master/tmp/install.sh)"
+```sh
+git clone https://github.com/vallisneria/dotfile.git $HOME/.dotfile
+alias dotf='git --git-dir=$HOME/.dotfile --work-tree=$HOME'
+dotf checkout
+dotf config --local status.showUntrackedFiles no
 ```
 

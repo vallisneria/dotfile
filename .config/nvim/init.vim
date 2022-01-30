@@ -42,7 +42,7 @@ map <F5> :NERDTreeToggle<CR>
 let delimitMate_expand_cr=1
 
 " coc-nvim 확장 목록
-let g:coc_global_extensions = ['coc-json', 'coc-sh', 'coc-pyright', 'coc-tsserver', 'coc-rls']
+let g:coc_global_extensions = ['coc-json', 'coc-sh', 'coc-pyright', 'coc-tsserver', 'coc-rust-analyzer']
 
 " yaml 들여쓰기 2칸
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab

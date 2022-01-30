@@ -11,7 +11,7 @@ bspc config split_ratio             0.52
 bspc config borderless_monocle      true
 bspc config gapless_monocle         true
 
-bspc rule -a telegram-desktop state=floating
+bspc rule -a telegram state=floating
 
 # 환경 변수 설정
 export GTK_IM_MODULE=kime
@@ -25,7 +25,7 @@ xrandr --output $monitor --brightness $brightness_level
 
 # 프로그램 실행
 /usr/bin/kime-xim &
-/usr/bin/feh --bg-scale -no-fehbg $HOME/.config/wallpaper/wallpaper.png &
+/usr/bin/feh --bg-scale --no-fehbg $HOME/.config/wallpaper/wallpaper &
 $HOME/.config/polybar/launch.sh &
 /usr/bin/dunst &
 /usr/bin/sxhkd -c $HOME/.config/bspwm/sxhkdrc &

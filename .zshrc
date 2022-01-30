@@ -9,7 +9,13 @@ ZSH_THEME="agnoster"
 
 # 플러그인
 # https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins
-plugins=(git zsh-syntax-highlighting)
+plugins=(
+    archlinux
+    git
+    rust
+    docker
+    docker-compose
+)
 
 source $ZSH/oh-my-zsh.sh
 

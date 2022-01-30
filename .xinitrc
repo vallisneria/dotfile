@@ -20,4 +20,4 @@ picom -GCb
 export LANG=ko_KR.UTF-8
 
 # 윈도우 매니저 실행
-exec i3
+exec bspwm
