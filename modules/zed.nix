@@ -25,7 +25,10 @@
       };
       format_on_save = "on";
       formatter = "language_server";
-      terminal.detect_venv.on.directories = ["venv" ".venv"];
+      terminal.detect_venv.on.directories = [
+        "venv"
+        ".venv"
+      ];
 
       telemetry = {
         metrics = false;
