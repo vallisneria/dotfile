@@ -28,5 +28,7 @@
         # Optionally use extraSpecialArgs
         # to pass through arguments to home.nix
       };
+
+      formatter.${system} = pkgs.nixfmt-rfc-style;
     };
 }
