@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ config, ... }:
 
 {
   programs.zsh = {
@@ -29,12 +29,6 @@
     };
   };
 
-  home.file = {
-    zcompdump = {
-      enable = true;
-      target = "${config.xdg.cacheHome}/zsh/.keep";
-      text = "";
-    };
-  };
-
+  # compinit 은 dump 파일의 부모 디렉터리를 만들지 않으므로 미리 확보한다
+  xdg.cacheFile."zsh/.keep".text = "";
 }
