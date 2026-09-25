@@ -4,7 +4,6 @@
   imports = [
     ./modules/claude-code.nix
     ./modules/direnv.nix
-    ./modules/discord.nix
     ./modules/fastfetch.nix
     ./modules/ghostty.nix
     ./modules/git.nix
