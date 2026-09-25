@@ -24,6 +24,7 @@
     pkgs.rclone
     pkgs.iina
     pkgs.net-news-wire
+    pkgs.streamlink
   ];
 
   # 파일
