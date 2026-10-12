@@ -19,11 +19,12 @@
 
   # 패키지
   home.packages = [
-    pkgs.neovim
-    pkgs.mole-cleaner
-    pkgs.rclone
+    pkgs.glab
     pkgs.iina
+    pkgs.mole-cleaner
+    pkgs.neovim
     pkgs.net-news-wire
+    pkgs.rclone
     pkgs.streamlink
   ];
 
