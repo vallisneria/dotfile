@@ -19,6 +19,7 @@
 
   # 패키지
   home.packages = [
+    pkgs.ffmpeg
     pkgs.glab
     pkgs.iina
     pkgs.mole-cleaner
