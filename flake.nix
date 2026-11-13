@@ -6,10 +6,11 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    llm-agents.url = "github:numtide/llm-agents.nix";
   };
 
   outputs =
-    { nixpkgs, home-manager, ... }:
+    { nixpkgs, home-manager, llm-agents, ... }:
     let
       system = "aarch64-darwin";
       pkgs = import nixpkgs {
@@ -20,13 +21,8 @@
     {
       homeConfigurations."vallisneria" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-
-        # Specify your home configuration modules here, for example,
-        # the path to your home.nix.
+        extraSpecialArgs = { inherit llm-agents; };
         modules = [ ./home.nix ];
-
-        # Optionally use extraSpecialArgs
-        # to pass through arguments to home.nix
       };
 
       formatter.${system} = pkgs.nixfmt-rfc-style;

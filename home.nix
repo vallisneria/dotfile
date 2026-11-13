@@ -24,7 +24,6 @@
     pkgs.iina
     pkgs.mole-cleaner
     pkgs.neovim
-    pkgs.net-news-wire
     pkgs.rclone
     pkgs.streamlink
   ];
