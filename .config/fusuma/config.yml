@@ -1,8 +1,0 @@
-swipe:
-  3:
-    left:
-      command: "bspc desktop -f next.local"
-
-    right:
-      command: "bspc desktop -f prev.local"
-
