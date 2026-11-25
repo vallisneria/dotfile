@@ -5,7 +5,7 @@
     enable = true;
 
     hosts = {
-      "github.com" = { user = "vallisneria" };
+      "github.com" = { user = "vallisneria"; };
     };
 
     settings = {
