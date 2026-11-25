@@ -19,6 +19,11 @@
 
       window-width = 120;
       window-height = 45;
+
+      window-inherit-working-directory = false;
+      tab-inherit-working-directory = false;
+      split-inherit-working-directory = false;
+      window-save-state = "never";
     };
   };
 }

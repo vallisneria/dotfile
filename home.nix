@@ -6,6 +6,7 @@
     ./modules/direnv.nix
     ./modules/fastfetch.nix
     ./modules/ghostty.nix
+    ./modules/gh.nix
     ./modules/git.nix
     ./modules/starship.nix
     ./modules/yt-dlp.nix
